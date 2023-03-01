@@ -1,6 +1,3 @@
-//On first load, previous operand is null and current operand is 0
-//On digit button press, current operand becomes that digit/s
-
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', populateDisplay));
 
@@ -206,8 +203,6 @@ function populateDisplay(e) {
     displayPrevOperand.textContent = `${previousOperand}${operator}`;
     displayCurrOperand.textContent = currentOperand;
 }
-//When an operation button is pressed, the previous operand takes the form
-//of the current operand + the operation pressed
 
 function add(num1, num2) {
     return num1 + num2;
@@ -236,5 +231,3 @@ function operate(operator, num1, num2) {
             : operator === "/" ? divide(num1, num2)
             : raiseToPow(num1, num2);
 }
-//When the evaluation button is pressed, the previous operand is null
-//and the current operand shows the result of the operation
