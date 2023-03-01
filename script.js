@@ -77,9 +77,10 @@ function populateDisplay(e) {
             currentOperand = '0';
             break;
         case "DEL":
-            currentOperand = currentOperand.slice(0, currentOperand.length - 1);
-            if (currentOperand.length === 0 && currentOperand !== '') {
-                currentOperand = '0'
+            if (currentOperand.length === 1) {
+                currentOperand = '0';
+            } else {
+                currentOperand = currentOperand.slice(0, currentOperand.length - 1);
             }
             break;
         case "+":
