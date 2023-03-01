@@ -231,3 +231,15 @@ function operate(operator, num1, num2) {
             : operator === "/" ? divide(num1, num2)
             : raiseToPow(num1, num2);
 }
+
+buttons.forEach(button => button.addEventListener('mousedown', activateButton));
+buttons.forEach(button => button.addEventListener('mouseup', deactivateButton));
+
+function activateButton(e) {
+    buttons.forEach(button => button.classList.remove('active'));
+    e.target.classList.add('active');
+}
+
+function deactivateButton(e) {
+    e.target.classList.remove('active');
+}

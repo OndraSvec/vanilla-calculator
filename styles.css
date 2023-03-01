@@ -51,6 +51,7 @@ body {
     font-size: clamp(0.7rem, 6vmin, 1.75rem);
     background-color: rgb(226, 226, 226);
     color: black;
+    opacity: 0.9;
 }
 
 .button.red,
@@ -68,4 +69,9 @@ body {
 
 .button.span-two {
     grid-column: 3 / span 2;
+}
+
+.active {
+    opacity: 1;
+    box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.548);
 }
