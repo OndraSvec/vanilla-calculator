@@ -39,14 +39,10 @@ body {
 
 .display .previous-operand {
     font-size: clamp(0.4rem, 4vmin, 1.25rem);
-    flex-wrap: wrap;
-    word-break: break-all;
-}
+   }
 
 .display .current-operand {
     font-size: clamp(0.7rem, 6vmin, 1.75rem);
-    flex-wrap: wrap;
-    word-break: break-all;
 }
 
 .button {
