@@ -51,7 +51,7 @@ body {
     font-size: clamp(0.7rem, 6vmin, 1.75rem);
     background-color: rgb(226, 226, 226);
     color: black;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .button.red,
@@ -72,6 +72,6 @@ body {
 }
 
 .active {
-    opacity: 1;
+    opacity: 0.95;
     box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.548);
 }
