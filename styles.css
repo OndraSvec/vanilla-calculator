@@ -41,3 +41,7 @@ body {
 .button {
     font-size: clamp(0.7rem, 6vmin, 1.75rem);
 }
+
+.button.span-two {
+    grid-column: 3 / span 2;
+}
