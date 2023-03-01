@@ -20,22 +20,33 @@ body {
 .calc {
     background-color: black;
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, clamp(2rem, 15vmin, 5rem));
+    grid-template-rows: minmax(5rem, auto) repeat(5, clamp(2rem, 15vmin, 5rem));
+    gap: 0.25rem;
     
 }
 
 .display {
     background-color: rgba(253, 253, 253, 0.651);
-    min-height: 7rem;
+    padding: 0.5rem;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, clamp(2rem, 15vmin, 5rem));
-    grid-template-rows: repeat(5, clamp(2rem, 15vmin, 5rem));
-    gap: 0.25rem;
+.display .previous-operand {
+    font-size: clamp(0.4rem, 4vmin, 1.25rem);
+    flex-wrap: wrap;
+    word-break: break-all;
+}
+
+.display .current-operand {
+    font-size: clamp(0.7rem, 6vmin, 1.75rem);
+    flex-wrap: wrap;
+    word-break: break-all;
 }
 
 .button {
