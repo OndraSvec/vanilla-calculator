@@ -28,7 +28,7 @@ body {
 }
 
 .display {
-    background-color: rgba(253, 253, 253, 0.651);
+    background-color: rgb(226, 226, 226);
     padding: 0.5rem;
     grid-column: 1 / -1;
     display: flex;
@@ -51,6 +51,21 @@ body {
 
 .button {
     font-size: clamp(0.7rem, 6vmin, 1.75rem);
+    background-color: rgb(226, 226, 226);
+    color: black;
+}
+
+.button.red,
+.button.blue {
+    color: white;
+}
+
+.button.red {
+    background-color: rgb(172, 17, 17);
+}
+
+.button.blue {
+    background-color: rgb(107, 171, 230);
 }
 
 .button.span-two {
