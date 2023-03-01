@@ -177,7 +177,7 @@ function populateDisplay(e) {
             break;
         case ".":
             if (currentOperand === '') currentOperand += `0${e.target.id}`;
-            else if (currentOperand.includes(e.target.id)) return;
+            else if (currentOperand.includes(e.target.id) || currentOperand === 'Undefined!') return;
             else {
                 currentOperand += e.target.id;
             }
