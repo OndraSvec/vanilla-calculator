@@ -86,7 +86,8 @@ function populateDisplay(e) {
         case "+":
             if (currentOperand.endsWith('.')) return;
             else if (previousOperand !== '' && operator !== '') {
-                if (currentOperand % 1 !== 0 || previousOperand % 1 !== 0) {
+                if (!currentOperand) operator = e.target.id;
+                else if (currentOperand % 1 !== 0 || previousOperand % 1 !== 0) {
                     previousOperand = operate(operator, parseFloat(previousOperand), parseFloat(currentOperand)).toString();
                     operator = e.target.id;
                     currentOperand = "";
@@ -104,7 +105,8 @@ function populateDisplay(e) {
         case "-":
             if (currentOperand.endsWith('.')) return;
             else if (previousOperand !== '' && operator !== '') {
-                if (currentOperand % 1 !== 0 || previousOperand % 1 !== 0) {
+                if (!currentOperand) operator = e.target.id;
+                else if (currentOperand % 1 !== 0 || previousOperand % 1 !== 0) {
                     previousOperand = operate(operator, parseFloat(previousOperand), parseFloat(currentOperand)).toString();
                     operator = e.target.id;
                     currentOperand = "";
@@ -122,7 +124,8 @@ function populateDisplay(e) {
         case "*":
             if (currentOperand.endsWith('.')) return;
             else if (previousOperand !== '' && operator !== '') {
-                if (currentOperand % 1 !== 0 || previousOperand % 1 !== 0) {
+                if (!currentOperand) operator = e.target.id;
+                else if (currentOperand % 1 !== 0 || previousOperand % 1 !== 0) {
                     previousOperand = operate(operator, parseFloat(previousOperand), parseFloat(currentOperand)).toString();
                     operator = e.target.id;
                     currentOperand = "";
@@ -140,7 +143,8 @@ function populateDisplay(e) {
         case "/":
             if (currentOperand.endsWith('.')) return;
             else if (previousOperand !== '' && operator !== '') {
-                if (currentOperand % 1 !== 0 || previousOperand % 1 !== 0) {
+                if (!currentOperand) operator = e.target.id;
+                else if (currentOperand % 1 !== 0 || previousOperand % 1 !== 0) {
                     previousOperand = operate(operator, parseFloat(previousOperand), parseFloat(currentOperand)).toString();
                     operator = e.target.id;
                     currentOperand = "";
@@ -158,7 +162,8 @@ function populateDisplay(e) {
         case "^":
             if (currentOperand.endsWith('.')) return;
             else if (previousOperand !== '' && operator !== '') {
-                if (currentOperand % 1 !== 0 || previousOperand % 1 !== 0) {
+                if (!currentOperand) operator = e.target.id;
+                else if (currentOperand % 1 !== 0 || previousOperand % 1 !== 0) {
                     previousOperand = operate(operator, parseFloat(previousOperand), parseFloat(currentOperand)).toString();
                     operator = e.target.id;
                     currentOperand = "";
